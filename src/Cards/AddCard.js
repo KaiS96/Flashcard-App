@@ -20,7 +20,7 @@ function AddCard({ deck }) {
         setDecks(() => currentDeck);
     }
     loadDeck();
-  }, []);
+  }, [deck.id]);
 
   const onCancel = (event) => {
     event.preventDefault();

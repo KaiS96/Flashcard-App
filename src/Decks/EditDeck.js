@@ -12,7 +12,7 @@ function EditDeck({ deck, loadPage, setLoadPage }) {
 
   useEffect(() => {
     readDeck(deckId).then(deck => setCurrentDeckData(deck))
-  }, []);
+  }, [deckId]);
 
   // Cancel button to return to current deckId
   const onCancel = (event) => {
@@ -45,7 +45,7 @@ function EditDeck({ deck, loadPage, setLoadPage }) {
         handleSubmit={handleSubmit}
         onCancel={onCancel}
         submitLabel="Save"
-        cancelLabel="Done"
+        cancelLabel="Cancel"
         initialState={currentDeckData}
       />
     </div>

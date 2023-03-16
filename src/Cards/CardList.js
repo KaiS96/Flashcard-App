@@ -24,7 +24,7 @@ function CardList({ deck, loadPage, setLoadPage }) {
             <p>{card.back}</p>
           </div>
           <Link to={`${url}/cards/${card.id}/edit`}>
-          <button type="button" class="btn btn-secondary">
+          <button type="button" class="btn btn-secondary mr-2">
             Edit
           </button>
             </Link>

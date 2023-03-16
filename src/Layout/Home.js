@@ -7,7 +7,7 @@ function Home({ decks, loadPage, setLoadPage }) {
     <div>
       <div className="container">
         <Link to="/decks/new">
-          <button type="button" className="btn btn-secondary">
+          <button type="button" className="btn btn-secondary mb-2">
             Create Deck
           </button>
         </Link>

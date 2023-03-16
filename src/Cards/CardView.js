@@ -70,7 +70,7 @@ function CardView({ studyDeck }) {
               </p>
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-secondary mr-2"
                 onClick={flipHandler}
               >
                 Flip

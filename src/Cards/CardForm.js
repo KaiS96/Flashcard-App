@@ -7,32 +7,33 @@ function CardForm({
   cancelLabel,
   initialState,
 }) {
-  const [cardData, setCardData] = useState(initialState)
+  const [cardData, setCardData] = useState(initialState);
   // console.log(initialState)
   // const history = useHistory();
 
   const handleCardUpdate = (event) => {
     setCardData({
       ...cardData,
-      [event.target.name]: event.target.value
-    })
-  }
+      [event.target.name]: event.target.value,
+    });
+  };
 
   useEffect(() => {
-    setCardData(initialState)
-  }, [initialState])
+    setCardData(initialState);
+  }, [initialState]);
 
   const onSubmit = (event) => {
     event.preventDefault();
     handleSubmit(cardData);
-    setCardData({ ...initialState })
-  }
-  
+    setCardData({ ...initialState });
+  };
+
   return (
     <form onSubmit={onSubmit}>
-      <div>
+      <div className="form-group">
         <label htmlFor="card-front">Front:</label>
         <textarea
+          className="form-control"
           name="front"
           id="card-front"
           type="textarea"
@@ -42,9 +43,10 @@ function CardForm({
           onChange={handleCardUpdate}
         />
       </div>
-      <div>
+      <div className="form-group">
         <label htmlFor="card-back">Back:</label>
         <textarea
+          className="form-control"
           name="back"
           id="card-back"
           type="textarea"
@@ -55,9 +57,16 @@ function CardForm({
         />
       </div>
       <div>
-        <button type="button" onClick={onCancel}>{cancelLabel}
+        <button
+          type="button"
+          className="btn btn-secondary mr-2"
+          onClick={onCancel}
+        >
+          {cancelLabel}
         </button>
-        <button type="submit">{submitLabel}</button>
+        <button type="submit" className="btn btn-primary">
+          {submitLabel}
+        </button>
       </div>
     </form>
   );

@@ -11,7 +11,7 @@ function EditCard({ deck }) {
 
     useEffect(() => {
         readCard(cardId).then(card => setCurrentCardData(card))
-    }, [])
+    }, [cardId])
 
     // Cancel button to return to current deckId
     const onCancel = (event) => {

@@ -48,17 +48,17 @@ function Deck({ deck, setDeck, loadPage, setLoadPage }) {
         <h2>{deck.name}</h2>
         <p>{deck.description}</p>
         <Link to={`${url}/edit`}>
-          <button type="button" className="btn btn-secondary">
+          <button type="button" className="btn btn-secondary mr-2">
             Edit
           </button>
         </Link>
         <Link to={`${url}/study`}>
-          <button type="button" className="btn btn-primary">
+          <button type="button" className="btn btn-primary mr-2">
             Study
           </button>
         </Link>
         <Link to={`${url}/cards/new`}>
-          <button type="button" className="btn btn-primary">
+          <button type="button" className="btn btn-primary mr-2">
             Add Cards
           </button>
         </Link>
