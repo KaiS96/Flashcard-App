@@ -45,19 +45,19 @@ function CardView({ studyDeck }) {
   //2 or fewer cards - display message "Not enough cards" and button to add more cards
   if (studyDeck.cards.length > 2) {
     return (
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">
             Card {currentIndex + 1} of {studyDeck.cards.length}
           </h5>
           {front === true ? (
             <div>
-              <p class="card-text">
+              <p className="card-text">
                 {studyDeck.cards[currentIndex].front}
               </p>
               <button
                 type="button"
-                class="btn btn-secondary"
+                className="btn btn-secondary"
                 onClick={flipHandler}
               >
                 Flip
@@ -65,19 +65,19 @@ function CardView({ studyDeck }) {
             </div>
           ) : (
             <div>
-              <p class="card-text">
+              <p className="card-text">
               {studyDeck.cards[currentIndex].back}
               </p>
               <button
                 type="button"
-                class="btn btn-secondary mr-2"
+                className="btn btn-secondary mr-2"
                 onClick={flipHandler}
               >
                 Flip
               </button>
               <button
                 type="button"
-                class="btn btn-primary"
+                className="btn btn-primary"
                 onClick={nextHandler}
               >
                 Next

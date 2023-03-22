@@ -17,18 +17,18 @@ function CardList({ deck, loadPage, setLoadPage }) {
   return (
     <div>
         {deck.cards.map((card) => (
-      <div class="card">
-        <div class="card-body">
-          <div class="card-text">
+      <div className="card">
+        <div className="card-body">
+          <div className="card-text">
             <p>{card.front}</p>
             <p>{card.back}</p>
           </div>
           <Link to={`${url}/cards/${card.id}/edit`}>
-          <button type="button" class="btn btn-secondary mr-2">
+          <button type="button" className="btn btn-secondary mr-2">
             Edit
           </button>
             </Link>
-          <button type="button" class="btn btn-danger" onClick={() => handleDeleteCard(card)}>
+          <button type="button" className="btn btn-danger" onClick={() => handleDeleteCard(card)}>
             Delete
           </button> 
         </div>

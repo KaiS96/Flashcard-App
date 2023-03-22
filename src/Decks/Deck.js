@@ -62,7 +62,7 @@ function Deck({ deck, setDeck, loadPage, setLoadPage }) {
             Add Cards
           </button>
         </Link>
-        <button type="button" class="btn btn-danger" onClick={() => handleDeleteDeck(deck)}>
+        <button type="button" className="btn btn-danger" onClick={() => handleDeleteDeck(deck)}>
           Delete
         </button>
           <h3>Cards</h3>

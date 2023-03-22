@@ -4,7 +4,7 @@ import { createDeck } from '../utils/api';
 import DeckForm from './DeckForm';
 import { useHistory } from 'react-router-dom';
 
-function CreateDeck({ deck }) {
+function CreateDeck() {
   const initialState = {
     name: "",
     description: "",

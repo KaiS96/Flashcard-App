@@ -38,7 +38,7 @@ function DeckForm({
           id="deck-name"
           type="text"
           required={true}
-          value={deckData.name}
+          value={deckData.name || ''}
           placeholder="Deck Name"
           onChange={handleDeckUpdate}
         />
@@ -51,7 +51,7 @@ function DeckForm({
           id="deck-description"
           type="textarea"
           required={true}
-          value={deckData.description}
+          value={deckData.description || ''}
           placeholder="Brief description of deck"
           onChange={handleDeckUpdate}
         />
